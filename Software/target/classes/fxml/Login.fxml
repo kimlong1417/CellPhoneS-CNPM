@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="496.0" prefWidth="330.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+   <children>
+      <Label fx:id="status" layoutX="28.0" layoutY="289.0" prefHeight="22.0" prefWidth="274.0" styleClass="font" stylesheets="@../css/style.css" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="99.0" layoutY="84.0" prefHeight="45.0" prefWidth="132.0" styleClass="login-label" stylesheets="@../css/style.css" text="Đăng Nhập" wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userEmail" layoutX="28.0" layoutY="157.0" onAction="#enterLogin" prefHeight="50.0" prefWidth="274.0" promptText="Email" styleClass="login-text-field" stylesheets="@../css/style.css">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="userPassword" layoutX="28.0" layoutY="225.0" onAction="#enterLogin" prefHeight="50.0" prefWidth="274.0" promptText="Password" styleClass="login-text-field" stylesheets="@../css/style.css">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="loginButton" layoutX="105.0" layoutY="327.0" mnemonicParsing="false" onAction="#login" prefHeight="39.0" prefWidth="120.0" stylesheets="@../css/style.css" text="Đăng nhập">
+         <styleClass>
+            <String fx:value="login-button" />
+            <String fx:value="font" />
+         </styleClass>
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fx:id="close" fitHeight="29.0" fitWidth="32.0" layoutX="288.0" layoutY="107.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/close_button.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <HBox alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="330.0" styleClass="navigation-hbox" stylesheets="@../css/style.css">
+         <children>
+            <ImageView fx:id="minimize" fitHeight="24.0" fitWidth="22.0" onMouseClicked="#minimizeWindow" pickOnBounds="true" preserveRatio="true" styleClass="minimize">
+               <image>
+                  <Image url="@../image/minimize_button.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="close" fitHeight="26.0" fitWidth="26.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true" styleClass="exit">
+               <image>
+                  <Image url="@../image/close_button.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets left="14.0" right="7.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <Label layoutX="10.0" layoutY="10.0" styleClass="software-name-font" stylesheets="@../css/style.css" text="CellPhoneS" textFill="WHITE" AnchorPane.leftAnchor="10.0" />
+   </children>
+   <styleClass>
+      <String fx:value="bodyborder" />
+      <String fx:value="shadow" />
+   </styleClass>
+</AnchorPane>

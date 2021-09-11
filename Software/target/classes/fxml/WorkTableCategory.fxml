@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="host" onMouseClicked="#requestFocus" prefHeight="662.0" prefWidth="1203.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.WorkTableCategoryController">
+   <children>
+      <Label fx:id="timeTableLabel" layoutX="14.0" layoutY="12.0" prefHeight="37.0" prefWidth="148.0" styleClass="font-29" stylesheets="@../css/style.css" text="Lịch làm" textFill="#2b2733">
+         <font>
+            <Font size="29.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <AnchorPane layoutX="23.0" layoutY="59.0" prefHeight="591.0" prefWidth="1157.0" style="-fx-background-radius: 5px; -fx-background-color: FFFFFF; -fx-border-color: #ebecee #ebecee; -fx-border-radius: 5px;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <GridPane prefHeight="552.0" prefWidth="1128.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="14.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="475.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox prefHeight="54.0" prefWidth="1123.0">
+                     <children>
+                        <TextField fx:id="searchBar" focusTraversable="false" prefHeight="33.0" prefWidth="222.0" promptText="Nhập tên nhân viên" stylesheets="@../css/style.css">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="search-bar" />
+                              <String fx:value="top-font" />
+                           </styleClass>
+                           <HBox.margin>
+                              <Insets left="12.0" top="7.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <JFXButton focusTraversable="false" onAction="#search" prefHeight="33.0" prefWidth="110.0" stylesheets="@../css/style.css" text="Tìm Kiếm">
+                           <styleClass>
+                              <String fx:value="login-button" />
+                              <String fx:value="font" />
+                           </styleClass>
+                           <HBox.margin>
+                              <Insets left="10.0" top="7.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton focusTraversable="false" onAction="#openShift" stylesheets="@../css/style.css" text="Ca làm">
+                           <styleClass>
+                              <String fx:value="login-button" />
+                              <String fx:value="font" />
+                           </styleClass>
+                           <HBox.margin>
+                              <Insets left="554.0" top="7.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="addWorkTable" focusTraversable="false" layoutX="1013.0" layoutY="17.0" onAction="#save" stylesheets="@../css/style.css" text="+ Thêm mới">
+                           <styleClass>
+                              <String fx:value="login-button" />
+                              <String fx:value="font" />
+                           </styleClass>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets left="10.0" top="7.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="contentTable" editable="true" focusTraversable="false" onMouseClicked="#select" prefHeight="498.0" prefWidth="1149.0" styleClass="table-font" stylesheets="@../css/style.css" GridPane.rowIndex="1">
+                     <columns>
+                        <TableColumn fx:id="nameCol" prefWidth="311.0" text="Tên nhân viên" />
+                        <TableColumn fx:id="shiftCol" minWidth="0.0" prefWidth="165.0" text="Ca làm" />
+                        <TableColumn fx:id="timeInCol" minWidth="0.0" prefWidth="124.0" text="Giờ vào" />
+                        <TableColumn fx:id="timeOutCol" minWidth="0.0" prefWidth="124.0" text="Giờ ra" />
+                        <TableColumn fx:id="workDaysCol" minWidth="0.0" prefWidth="416.0" text="Ngày làm trong tuần" />
+                     </columns>
+                  </TableView>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

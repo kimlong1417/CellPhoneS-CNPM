@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="host" onMouseClicked="#requestFocus" prefHeight="662.0" prefWidth="1203.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StatisticController">
+   <children>
+      <Label layoutX="14.0" layoutY="12.0" prefHeight="37.0" prefWidth="153.0" styleClass="font" stylesheets="@../css/style.css" text="Thống kê" textFill="#2b2733">
+         <font>
+            <Font size="29.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <AnchorPane layoutX="23.0" layoutY="59.0" prefHeight="591.0" prefWidth="1157.0" style="-fx-background-radius: 5px; -fx-background-color: #fff; -fx-border-color: #ebecee; -fx-border-radius: 5px;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <AnchorPane fx:id="statisticHolder" layoutX="14.0" layoutY="60.0" prefHeight="517.0" prefWidth="1130.0" />
+            <ComboBox fx:id="statisticChooser" focusTraversable="false" layoutX="28.0" layoutY="29.0" onAction="#chooseStatistic" prefHeight="31.0" prefWidth="488.0" promptText="Chọn thống kê" styleClass="font" stylesheets="@../css/style.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

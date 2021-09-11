@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Host" prefHeight="708.0" prefWidth="1280.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainNavigatorController">
+    <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="1280.0" styleClass="navigation-hbox" stylesheets="@../css/style.css">
+            <children>
+            <Label styleClass="software-name-font" stylesheets="@../css/style.css" text="CellPhoneS" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </Label>
+            <Line endX="100.0" endY="46.0" rotate="15.0" startX="100.0" stroke="WHITE" strokeLineCap="BUTT">
+               <HBox.margin>
+                  <Insets left="28.0" />
+               </HBox.margin>
+            </Line>
+            <ImageView fitHeight="24.0" fitWidth="22.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true" styleClass="logout">
+               <image>
+                  <Image url="@../image/logout_button.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="1029.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="minimize" fitHeight="24.0" fitWidth="22.0" layoutX="1220.0" layoutY="22.0" onMouseClicked="#minimizeWindow" pickOnBounds="true" preserveRatio="true" styleClass="minimize">
+               <image>
+                  <Image url="@../image/minimize_button.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets left="14.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="close" fitHeight="26.0" fitWidth="26.0" layoutX="1256.0" layoutY="20.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true" styleClass="exit">
+               <image>
+                  <Image url="@../image/close_button.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="12.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            </children>
+        </HBox>
+      <AnchorPane fx:id="contentPanel" layoutX="77.0" layoutY="46.0" prefHeight="662.0" prefWidth="1203.0" />
+      <VBox fx:id="leftNav" alignment="TOP_CENTER" layoutY="46.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="665.0" prefWidth="77.0" style="-fx-border-width: 0px 1px 0px 0px;" styleClass="left-nav" stylesheets="@../css/style.css">
+         <children>
+                <JFXButton fx:id="orderButton" alignment="CENTER" cache="true" contentDisplay="TOP" focusTraversable="false" graphicTextGap="0.0" onAction="#openOrderCategory" prefHeight="71.0" prefWidth="77.0" stylesheets="@../css/style.css" text="Đơn hàng">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+               <styleClass>
+                  <String fx:value="navigation-button" />
+                  <String fx:value="left-nav-button-font" />
+               </styleClass>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/order_button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+                </JFXButton>
+                <JFXButton fx:id="customerButton" alignment="CENTER" contentDisplay="TOP" focusTraversable="false" onAction="#openCustomerCategory" prefHeight="71.0" prefWidth="77.0" stylesheets="@../css/style.css" text="Khách hàng">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+               <styleClass>
+                  <String fx:value="navigation-button" />
+                  <String fx:value="left-nav-button-font" />
+               </styleClass>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/customer_button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+                </JFXButton>
+            <JFXButton fx:id="receiptButton" alignment="CENTER" contentDisplay="TOP" focusTraversable="false" graphicTextGap="12.0" layoutX="10.0" layoutY="84.0" onAction="#openReceiptCategory" prefHeight="71.0" prefWidth="144.0" stylesheets="@../css/style.css" text="Hoá đơn">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="navigation-button" />
+                  <String fx:value="left-nav-button-font" />
+               </styleClass>
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/receipt_button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets top="8.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="importsButton" alignment="CENTER" contentDisplay="TOP" focusTraversable="false" layoutX="10.0" layoutY="561.0" onAction="#openImportsCategory" prefHeight="71.0" prefWidth="144.0" stylesheets="@../css/style.css" text="Nhập hàng">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="navigation-button" />
+                  <String fx:value="left-nav-button-font" />
+               </styleClass>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/imports_button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="employeeButton" alignment="CENTER" contentDisplay="TOP" focusTraversable="false" layoutX="10.0" layoutY="158.0" onAction="#openEmployeeCategory" prefHeight="71.0" prefWidth="144.0" stylesheets="@../css/style.css" text="Nhân viên">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="navigation-button" />
+                  <String fx:value="left-nav-button-font" />
+               </styleClass>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/employee_button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="merchandiseButton" alignment="CENTER" contentDisplay="TOP" focusTraversable="false" graphicTextGap="7.0" layoutX="10.0" layoutY="232.0" onAction="#openMerchandiseCategory" prefHeight="71.0" prefWidth="144.0" stylesheets="@../css/style.css" text="Hàng hoá">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="navigation-button" />
+                  <String fx:value="left-nav-button-font" />
+               </styleClass>
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/merchandise_button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="statisticButton" alignment="CENTER" contentDisplay="TOP" focusTraversable="false" graphicTextGap="8.0" layoutX="10.0" layoutY="306.0" onAction="#openStatistic" prefHeight="71.0" prefWidth="144.0" stylesheets="@../css/style.css" text="Thống kê">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="navigation-button" />
+                  <String fx:value="left-nav-button-font" />
+               </styleClass>
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/statistic_button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="rolesButton" alignment="CENTER" contentDisplay="TOP" focusTraversable="false" layoutX="10.0" layoutY="380.0" onAction="#openRolesCategory" prefHeight="71.0" prefWidth="144.0" stylesheets="@../css/style.css" text="Chức vụ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="navigation-button" />
+                  <String fx:value="left-nav-button-font" />
+               </styleClass>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/roles_button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="timeTableButton" alignment="CENTER" contentDisplay="TOP" focusTraversable="false" layoutX="10.0" layoutY="485.0" onAction="#openTimeTable" prefHeight="71.0" prefWidth="144.0" stylesheets="@../css/style.css" text="Lịch làm">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="navigation-button" />
+                  <String fx:value="left-nav-button-font" />
+               </styleClass>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/timetable_button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets top="3.0" />
+               </padding>
+            </JFXButton>
+         </children>
+      </VBox>
+    </children>
+   <styleClass>
+      <String fx:value="navigation-body-border" />
+      <String fx:value="shadow" />
+   </styleClass>
+</AnchorPane>

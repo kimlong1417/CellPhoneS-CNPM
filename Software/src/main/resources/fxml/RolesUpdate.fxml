@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="host" onMouseClicked="#requestFocus" prefHeight="471.0" prefWidth="444.0" styleClass="borderoutline" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RolesUpdateController">
+   <children>
+      <Label fx:id="rolesUpdateLabel" layoutX="21.0" layoutY="17.0" styleClass="top-font" stylesheets="@../css/style.css" text="Cập Nhật Chức Vụ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <HBox alignment="BASELINE_CENTER" layoutX="21.0" layoutY="58.0" prefHeight="32.0" prefWidth="401.0">
+         <children>
+            <GridPane prefHeight="32.0" prefWidth="261.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="104.0" minWidth="10.0" prefWidth="102.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="246.40001220703124" minWidth="10.0" prefWidth="159.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label styleClass="font" stylesheets="@../css/style.css" text="Tên chức vụ:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nameHolder" prefHeight="23.0" prefWidth="165.0" promptText="Nhập tên chức vụ" styleClass="top-font" stylesheets="@../css/style.css" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <JFXButton fx:id="updateButton" focusTraversable="false" layoutX="331.0" layoutY="425.0" onAction="#update" prefHeight="32.0" prefWidth="91.0" stylesheets="@../css/style.css" text="Cập nhật">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <styleClass>
+            <String fx:value="save-button" />
+            <String fx:value="button-font" />
+         </styleClass>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="closeButton" focusTraversable="false" layoutX="21.0" layoutY="425.0" onMouseClicked="#close" prefHeight="32.0" prefWidth="70.0" stylesheets="@../css/style.css" text="Đóng">
+         <styleClass>
+            <String fx:value="close-button" />
+            <String fx:value="button-font" />
+         </styleClass>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="29.0" fitWidth="32.0" layoutX="394.0" layoutY="16.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/close_button.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="errorMessage" layoutX="21.0" layoutY="391.0" prefHeight="27.0" prefWidth="241.0" styleClass="top-font" stylesheets="@../css/style.css" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="21.0" layoutY="117.0" prefHeight="267.0" prefWidth="401.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <JFXListView fx:id="selectedPermissionList" focusTraversable="false" onMouseClicked="#removeSelected" styleClass="table-font" stylesheets="@../css/style.css" GridPane.columnIndex="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <GridPane.margin>
+                  <Insets left="9.0" />
+               </GridPane.margin>
+            </JFXListView>
+            <TableView fx:id="permissionTable" onMouseClicked="#select" prefHeight="200.0" prefWidth="200.0" stylesheets="@../css/style.css">
+               <columns>
+                  <TableColumn fx:id="nameCol" prefWidth="200.0" text="- Quyền" />
+               </columns>
+               <styleClass>
+                  <String fx:value="table-view" />
+                  <String fx:value="table-font" />
+               </styleClass>
+               <GridPane.margin>
+                  <Insets right="9.0" />
+               </GridPane.margin>
+            </TableView>
+         </children>
+      </GridPane>
+      <JFXButton focusTraversable="false" layoutX="231.0" layoutY="425.0" onAction="#delete" prefHeight="32.0" prefWidth="91.0" stylesheets="@../css/style.css" text="Xoá">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <styleClass>
+            <String fx:value="delete-button" />
+            <String fx:value="button-font" />
+         </styleClass>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

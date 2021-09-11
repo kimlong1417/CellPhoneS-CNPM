@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="host" onMouseClicked="#requestFocus" prefHeight="244.0" prefWidth="512.0" styleClass="borderoutline" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.WorkShiftAddController">
+   <children>
+      <Label layoutX="14.0" layoutY="17.0" styleClass="top-font" stylesheets="@../css/style.css" text="Thêm ca làm">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <HBox layoutX="14.0" layoutY="45.0" prefHeight="123.0" prefWidth="486.0">
+         <children>
+            <GridPane prefHeight="168.0" prefWidth="230.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="75.0" minWidth="10.0" prefWidth="75.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="246.40001220703124" minWidth="10.0" prefWidth="157.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="name" styleClass="font" stylesheets="@../css/style.css" text="Tên:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nameHolder" promptText="Nhập tên ca làm" styleClass="top-font" stylesheets="@../css/style.css" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label styleClass="font" stylesheets="@../css/style.css" text="Giờ vào:" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="timeInHolder" focusTraversable="false" prefHeight="30.0" prefWidth="162.0" styleClass="top-font" stylesheets="@../css/style.css" visibleRowCount="2" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+               </children>
+            </GridPane>
+            <GridPane prefHeight="168.0" prefWidth="230.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="223.80003662109374" minWidth="10.0" prefWidth="75.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="247.199951171875" minWidth="10.0" prefWidth="169.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label styleClass="font" stylesheets="@../css/style.css" text="Giờ ra:" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="timeOutHolder" focusTraversable="false" prefHeight="30.0" prefWidth="162.0" styleClass="top-font" stylesheets="@../css/style.css" visibleRowCount="2" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </GridPane>
+         </children>
+      </HBox>
+      <JFXButton fx:id="saveShift" focusTraversable="false" layoutX="431.0" layoutY="202.0" onAction="#save" prefHeight="32.0" prefWidth="70.0" stylesheets="@../css/style.css" text="Lưu">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <styleClass>
+            <String fx:value="save-button" />
+            <String fx:value="button-font" />
+         </styleClass>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="closeButton" focusTraversable="false" layoutX="14.0" layoutY="202.0" onMouseClicked="#close" prefHeight="32.0" prefWidth="70.0" stylesheets="@../css/style.css" text="Đóng">
+         <styleClass>
+            <String fx:value="close-button" />
+            <String fx:value="button-font" />
+         </styleClass>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="errorMessage" layoutX="14.0" layoutY="168.0" prefHeight="26.0" prefWidth="486.0" styleClass="top-font" stylesheets="@../css/style.css" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,10 @@
+Quản lí khách hàng, result: CUSTOMER_MANAGEMENT
+Quản lí nhân viên, result: EMPLOYEE_MANAGEMENT
+Quản lí nhập hàng, result: IMPORT_MANAGEMENT
+Quản lí hàng hoá, result: MERCHANDISE_MANAGEMENT
+Quản lí đơn hàng, result: ORDER_MANAGEMENT
+Quản lí hoá đơn, result: RECEIPT_MANAGEMENT
+Quản lí chức vụ, result: ROLES_MANAGEMENT
+Thống kê, result: STATISTIC
+Quản lí lịch làm, result: WORK_SHIFT_MANAGEMENT
+abcd, result: none

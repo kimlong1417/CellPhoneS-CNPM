@@ -1,0 +1,4 @@
+null, null, result: 4890000
+2020-02-02, null, result: 4890000
+null, 2020-02-02, result: empty
+2020-02-02, 2020-03-03, result: empty

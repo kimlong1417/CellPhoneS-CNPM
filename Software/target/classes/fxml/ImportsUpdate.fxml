@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="host" onMouseClicked="#requestFocus" prefHeight="872.0" prefWidth="843.0" styleClass="borderoutline" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ImportsUpdateController">
+   <children>
+      <GridPane layoutX="14.0" layoutY="54.0" prefHeight="42.0" prefWidth="710.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="122.0" minWidth="10.0" prefWidth="122.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="311.0" minWidth="10.0" prefWidth="271.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.0" minWidth="10.0" prefWidth="129.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="393.0" minWidth="10.0" prefWidth="188.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="0.0" prefHeight="46.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label styleClass="font" stylesheets="@../css/style.css" text="Khách hàng:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="23.0" prefWidth="131.0" styleClass="font" stylesheets="@../css/style.css" text="Số điện thoại:" GridPane.columnIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="phoneHolder" editable="false" focusTraversable="false" prefWidth="149.0" stylesheets="@../css/style.css" GridPane.columnIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="top-font" />
+                  <String fx:value="font-color" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="DISAPPEAR" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="customerHolder" editable="false" focusTraversable="false" prefWidth="149.0" stylesheets="@../css/style.css" GridPane.columnIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="top-font" />
+                  <String fx:value="font-color" />
+               </styleClass>
+               <GridPane.margin>
+                  <Insets right="71.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="DISAPPEAR" />
+               </cursor>
+            </TextField>
+         </children>
+      </GridPane>
+      <Label layoutX="14.0" layoutY="17.0" styleClass="top-font" stylesheets="@../css/style.css" text="Cập nhật phiếu nhập hàng">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="ordersTable" focusTraversable="false" layoutX="14.0" layoutY="178.0" prefHeight="158.0" prefWidth="815.0" stylesheets="@../css/style.css">
+         <columns>
+            <TableColumn fx:id="dateCol" prefWidth="101.0" text="Ngày" />
+            <TableColumn fx:id="descriptionCol" prefWidth="538.0" text="Diễn giải" />
+            <TableColumn fx:id="employeeCol" prefWidth="175.0" text="Nhân viên phụ trách" />
+         </columns>
+         <styleClass>
+            <String fx:value="top-font" />
+            <String fx:value="table-font" />
+         </styleClass>
+      </TableView>
+      <TextField fx:id="addressHolder" editable="false" focusTraversable="false" layoutX="135.0" layoutY="107.0" prefHeight="26.0" prefWidth="694.0" stylesheets="@../css/style.css">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <styleClass>
+            <String fx:value="top-font" />
+            <String fx:value="font-color" />
+         </styleClass>
+         <cursor>
+            <Cursor fx:constant="DISAPPEAR" />
+         </cursor>
+      </TextField>
+      <Label layoutX="14.0" layoutY="111.0" styleClass="font" stylesheets="@../css/style.css" text="Địa chỉ:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="152.0" prefHeight="26.0" prefWidth="71.0" styleClass="font" stylesheets="@../css/style.css" text="Đơn hàng">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <VBox layoutX="14.0" layoutY="349.0" prefHeight="370.0" prefWidth="815.0" style="-fx-border-color: #b3b3b3; -fx-border-width: 1px 0px 0px 0px;">
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+         <children>
+            <Label prefHeight="26.0" prefWidth="127.0" styleClass="font" stylesheets="@../css/style.css" text="Chi tiết đơn hàng">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <GridPane prefWidth="815.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="139.0" minWidth="10.0" prefWidth="112.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="139.0" minWidth="10.0" prefWidth="118.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="418.0" minWidth="10.0" prefWidth="376.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.0" minWidth="10.0" prefWidth="84.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="698.0" minWidth="10.0" prefWidth="132.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label styleClass="font" stylesheets="@../css/style.css" text="Tên hàng hoá:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="merchandiseHolder" editable="false" focusTraversable="false" prefWidth="149.0" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="top-font" />
+                        <String fx:value="font-color" />
+                     </styleClass>
+                     <GridPane.margin>
+                        <Insets right="20.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor>
+                  </TextField>
+                  <Label layoutX="10.0" layoutY="17.0" styleClass="font" stylesheets="@../css/style.css" text="Số lượng:" GridPane.columnIndex="3">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="quantityHolder" focusTraversable="false" layoutX="132.0" layoutY="12.0" prefHeight="26.0" prefWidth="131.0" stylesheets="@../css/style.css" GridPane.columnIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="top-font" />
+                        <String fx:value="font-color" />
+                     </styleClass>
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <JFXButton focusTraversable="false" onAction="#removeMerchandise" prefHeight="32.0" prefWidth="91.0" stylesheets="@../css/style.css" text="Xoá" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="delete-button" />
+                        <String fx:value="button-font" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <GridPane.margin>
+                        <Insets top="15.0" />
+                     </GridPane.margin>
+                  </JFXButton>
+                  <JFXButton focusTraversable="false" onAction="#updateImportsDetail" prefHeight="32.0" prefWidth="91.0" stylesheets="@../css/style.css" text="Cập nhật" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="update-button" />
+                        <String fx:value="button-font" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <GridPane.margin>
+                        <Insets top="15.0" />
+                     </GridPane.margin>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" top="10.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="DISAPPEAR" />
+               </cursor>
+            </GridPane>
+            <TableView fx:id="detailTable" focusTraversable="false" onMouseClicked="#pickMerchandise" prefHeight="230.0" prefWidth="815.0" stylesheets="@../css/style.css">
+               <columns>
+                  <TableColumn fx:id="merchandiseCol" prefWidth="372.0" text="Hàng hoá" />
+                  <TableColumn fx:id="quantityCol" minWidth="0.0" prefWidth="102.0" text="Số lượng" />
+                  <TableColumn fx:id="amountCol" minWidth="0.0" prefWidth="166.0" text="Giá" />
+                  <TableColumn fx:id="finalAmountCol" prefWidth="174.0" text="Thành tiền" />
+               </columns>
+               <styleClass>
+                  <String fx:value="top-font" />
+                  <String fx:value="table-font" />
+               </styleClass>
+            </TableView>
+         </children>
+      </VBox>
+      <JFXButton layoutX="16.0" layoutY="826.0" onMouseClicked="#close" prefHeight="32.0" prefWidth="70.0" stylesheets="@../css/style.css" text="Hủy">
+         <styleClass>
+            <String fx:value="button-font" />
+            <String fx:value="close-button" />
+         </styleClass>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <GridPane layoutX="490.0" layoutY="731.0" prefHeight="70.0" prefWidth="340.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.0" minWidth="10.0" prefWidth="119.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="156.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextField fx:id="sumQuantityHolder" editable="false" focusTraversable="false" styleClass="top-font" stylesheets="@../css/style.css" GridPane.columnIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DISAPPEAR" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="sumAmountHolder" editable="false" focusTraversable="false" layoutX="110.0" layoutY="12.0" styleClass="top-font" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DISAPPEAR" />
+               </cursor>
+            </TextField>
+            <Label styleClass="font" stylesheets="@../css/style.css" text="Tổng số lượng:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="17.0" styleClass="font" stylesheets="@../css/style.css" text="Tổng tiền:" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Label fx:id="errorMessage" layoutX="92.0" layoutY="829.0" prefHeight="26.0" prefWidth="659.0" styleClass="top-font" stylesheets="@../css/style.css" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXButton focusTraversable="false" layoutX="633.0" layoutY="826.0" onAction="#deleteImports" prefHeight="32.0" prefWidth="91.0" stylesheets="@../css/style.css" text="Xoá">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <styleClass>
+            <String fx:value="delete-button" />
+            <String fx:value="button-font" />
+         </styleClass>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="updateImportsButton" focusTraversable="false" layoutX="738.0" layoutY="826.0" onAction="#updateImports" prefHeight="32.0" prefWidth="91.0" stylesheets="@../css/style.css" text="Cập nhật">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <styleClass>
+            <String fx:value="update-button" />
+            <String fx:value="button-font" />
+         </styleClass>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

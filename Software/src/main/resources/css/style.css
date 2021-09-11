@@ -1,0 +1,329 @@
+.bodyborder {
+    -fx-background-color: #fff;
+    /*-fx-border-color: black;*/
+    /*-fx-border-radius: 5px;*/
+    /*-fx-background-radius: 10px;*/
+}
+
+.shadow {
+    -fx-effect: dropshadow(three-pass-box, rgba(110,46,4, 0.8), 10, 0, 0, 0);
+    -fx-background-insets: 0.5;
+}
+
+.borderoutline {
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-background-color: #fff;
+    /*-fx-border-style: line;*/
+    -fx-border-color: black;
+    -fx-border-width: 1.5;
+}
+
+.navigation-body-border {
+    /*-fx-background-radius: 5px;*/
+    -fx-background-color: #f5f8f5;
+}
+
+/* Font */
+
+.top-font {
+    -fx-font-weight: 300;
+    -fx-font-family: Arial, sans-serif;
+}
+
+.button-font {
+    -fx-font-weight: 500;
+    -fx-font-family: Arial, sans-serif;
+}
+
+.login-label {
+    -fx-font-weight: 700;
+    -fx-font-family: Arial, sans-serif;
+}
+
+.font {
+    -fx-font-weight: 700;
+    -fx-font-family: Arial, sans-serif;
+}
+
+.font-29 {
+    -fx-font-weight: 700;
+    -fx-font-family: Arial, sans-serif;
+    -fx-font-size: 29px;
+}
+
+.table-font {
+    -fx-font-weight: 700;
+    -fx-font-size: 15px;
+    -fx-font-family: Arial, sans-serif;
+}
+
+.search-bar {
+    -fx-background-radius: 5px;
+    -fx-font-size: 18px;
+}
+
+.software-name-font {
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 17px;
+    -fx-font-weight: 700;
+}
+
+.check-box-font {
+    -fx-font-weight: 700;
+    -fx-font-family: Arial, sans-serif;
+    -fx-font-size: 15px;
+}
+
+.check-box-font:selected {
+    -fx-font-weight: 700;
+    -fx-font-family: Arial, sans-serif;
+    -fx-font-size: 15px;
+}
+
+/* /Font*/
+
+.login-text-field {
+    -fx-background-radius: 10px;
+}
+
+/* Top Nav */
+
+.navigation-hbox {
+    -fx-background-color: #17bf63;
+    -fx-pref-height: 46px;
+}
+
+.navigation-button {
+    -fx-font-weight: 700;
+    -fx-font-size: 20px;
+    -fx-text-fill: #fff;
+}
+
+.navigation-button:hover {
+    -fx-background-color: #1e2022;
+}
+
+/* / Top Nax */
+
+/* Left Nav */
+
+.left-nav-button-font {
+    -fx-font-family: "Lato Semibold";
+    -fx-font-size: 11px;
+}
+
+.left-nav {
+    -fx-background-color: #262c32;
+}
+
+/* / Left Nav */
+
+/* Button */
+
+/*.login-button {*/
+/*    -fx-background-color: rgba(189, 89, 212, .8);*/
+/*    -fx-text-fill: #fff;*/
+/*    -fx-background-radius: 5px;*/
+/*    -fx-font-size: 18px;*/
+/*}*/
+
+/*.login-button:hover {*/
+/*    -fx-background-color: #4b2354;*/
+/*}*/
+
+.login-button {
+    /*-fx-background-color: #0066ff;*/
+    -fx-background-color: #17bf63;
+    -fx-background-radius: 5px;
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+}
+
+.login-button:hover {
+    -fx-background-color: white;
+    /*-fx-text-fill: #0066ff;*/
+    /*-fx-border-color: #0066ff;*/
+    -fx-text-fill: #17bf63;
+    -fx-border-color: #17bf63;
+    -fx-border-radius: 5px;
+}
+
+.add-button {
+    -fx-background-color: rgba(189, 89, 212, .8);
+    -fx-text-fill: #fff;
+    -fx-background-radius: 5px;
+    -fx-font-size: 16px;
+}
+
+.add-button:hover {
+    -fx-background-color: #4b2354;
+}
+
+.dialog-close-button {
+    -fx-background-color: #929898;
+    -fx-background-radius: 5px;
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+}
+
+.dialog-close-button:hover {
+    -fx-background-color: #253031;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+.close-button {
+    -fx-background-color: #525252;
+    -fx-background-radius: 5px;
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+}
+
+.close-button:hover {
+    -fx-background-color: white;
+    -fx-border-radius: 5px;
+    -fx-border-color: #525252;
+    -fx-text-fill: #525252;
+}
+
+.update-button {
+    /*-fx-background-color: #0066ff;*/
+    -fx-background-color: #17bf63;
+    -fx-background-radius: 5px;
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+}
+
+.update-button:hover {
+    -fx-background-color: white;
+    /*-fx-border-color: #0066ff;*/
+    /*-fx-text-fill: #0066ff;*/
+    -fx-border-color: #17bf63;
+    -fx-text-fill: #17bf63;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.save-button {
+    /*-fx-background-color: #0066ff;*/
+    -fx-background-color: #17bf63;
+    -fx-background-radius: 5px;
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+}
+
+.save-button:hover {
+    -fx-background-color: white;
+    /*-fx-border-color: #0066ff;*/
+    /*-fx-text-fill: #0066ff;*/
+    -fx-border-color: #17bf63;
+    -fx-text-fill: #17bf63;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-cursor: hand;
+}
+
+.add-button1 {
+    -fx-background-color: #ACD983;
+    -fx-text-fill: #000000;
+    -fx-background-radius: 5px;
+    -fx-font-size: 15px;
+}
+
+.text-color {
+    -fx-text-fill: #000000;
+}
+
+.delete-button {
+    -fx-background-color: #ff3548;
+    -fx-background-radius: 5px;
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+}
+
+.delete-button:hover {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-text-fill: #ff3548;
+    -fx-border-color: #ff3548;
+}
+
+/* /button*/
+
+/* table */
+.table-view .column-header .label {
+    -fx-alignment: CENTER-LEFT;
+}
+
+.table-row-cell:filled:selected {
+    /*-fx-background: -fx-control-inner-background ;*/
+    /*-fx-background-color: -fx-table-cell-border-color, -fx-background ;*/
+    /*-fx-background-insets: 0, 0 0 1 0 ;*/
+    /*-fx-table-cell-border-color: derive(-fx-color, 5%);*/
+    -fx-cursor: hand;
+}
+
+.table-row-cell:odd:filled:selected {
+    /*-fx-background: -fx-control-inner-background-alt ;*/
+    -fx-cursor: hand;
+}
+
+.table-row-cell:hover {
+    -fx-cursor: hand;
+}
+
+/* /table */
+
+/* Dialog */
+.myDialog {
+    -fx-background-color: #fff;
+    -fx-border-color: black;
+}
+
+.myDialog > *.label.content {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* Exit and minimize windows */
+
+.exit {
+    -fx-image: url("../image/close_button.png");
+}
+
+.exit:hover {
+    -fx-image: url("../image/close_button_hover.png");
+}
+
+.minimize {
+    -fx-image: url("../image/minimize_button.png");
+}
+
+.minimize:hover {
+    -fx-image: url("../image/minimize_button_hover.png");
+}
+
+.logout {
+    -fx-image: url("../image/logout_button.png");
+}
+
+.logout:hover {
+    -fx-image: url("../image/logout_button_hover.png");
+}
+
+/* /Exit and minimize windows */
+
+/* Size the combo-box drop down list */
+
+.combo-box-popup > .list-view {
+    -fx-pref-height: 115px;
+    -fx-cursor: hand;
+}
+
+/* ---------------------------------- */
+
+/* Barchart color */
+.default-color0.chart-bar { -fx-bar-fill: #249df9 }

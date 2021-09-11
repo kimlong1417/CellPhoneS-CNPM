@@ -1,0 +1,24 @@
+[
+  {
+    "input": {
+      "merchandiseName": "Oppo A73",
+      "quantity": "1",
+      "amount": "4890000"
+    }
+  },
+  {
+    "input": {
+      "merchandiseName": "Oppo A73",
+      "quantity": "1",
+      "amount": "4890000"
+    }
+  },
+  {
+    "input": {
+      "merchandiseName": "Vsmart Joy 4",
+      "quantity": "1",
+      "amount": "2890000",
+      "fromDate": "2021-03-26"
+    }
+  }
+]
